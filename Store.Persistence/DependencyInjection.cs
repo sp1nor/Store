@@ -14,6 +14,8 @@ namespace Store.Persistence
         {
             service.AddDbContext<ApplicationContext>(opt => opt.UseInMemoryDatabase("InMem"));
 
+            service.AddTransient<IGenericRepository<Product>, EFGenericRepository<Product>>();
+
             IServiceCollection serviceCollection = service.AddTransient<IUnitOfWork<Product>, EFUnitOfWork<Product>>();
             return serviceCollection;
         }
