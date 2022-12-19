@@ -1,4 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Store.Application.Common.Persistence;
+using Store.Domain.Entities;
+using Store.Persistence.Context;
+using Store.Persistence.Repositories;
+
+using Microsoft.EntityFrameworkCore;
 
 namespace Store.Persistence
 {
@@ -6,7 +12,9 @@ namespace Store.Persistence
     {
         public static IServiceCollection AddPersistence(this IServiceCollection service)
         {
-            //IServiceCollection serviceCollection = service.AddTransient<IUnitOfWork, EFUnitOfWork>();
+            service.AddDbContext<ApplicationContext>(opt => opt.UseInMemoryDatabase("InMem"));
+
+            IServiceCollection serviceCollection = service.AddTransient<IUnitOfWork<Product>, EFUnitOfWork<Product>>();
             return serviceCollection;
         }
     }

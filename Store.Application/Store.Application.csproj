@@ -12,7 +12,6 @@
     <Folder Include="Common\Interfaces\" />
     <Folder Include="Features\BuyerFeature\Commands\" />
     <Folder Include="Features\BuyerFeature\Queries\" />
-    <Folder Include="Features\ProductFeature\Queries\" />
     <Folder Include="Features\SaleFeature\Commands\" />
     <Folder Include="Features\SaleFeature\Queries\" />
     <Folder Include="Features\SalesPointFeature\Commands\" />
