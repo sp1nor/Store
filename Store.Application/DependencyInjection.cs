@@ -11,6 +11,9 @@ namespace Store.Application
             // add mediatR
             service.AddMediatR(Assembly.GetExecutingAssembly());
 
+            // add automapper
+            service.AddAutoMapper(Assembly.GetExecutingAssembly());
+
             //// add validation
             //service.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             //service.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
