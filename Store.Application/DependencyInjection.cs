@@ -1,5 +1,8 @@
-﻿using MediatR;
+﻿using FluentValidation;
+using MediatR;
+
 using Microsoft.Extensions.DependencyInjection;
+using Store.Application.Common.Behaviors;
 using System.Reflection;
 
 namespace Store.Application
@@ -14,9 +17,9 @@ namespace Store.Application
             // add automapper
             service.AddAutoMapper(Assembly.GetExecutingAssembly());
 
-            //// add validation
-            //service.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
-            //service.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+            // add validation
+            service.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+            service.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 
             //// add cache
             //service.AddDistributedMemoryCache();
