@@ -6,7 +6,7 @@ repository pattern, rich model
 Implementation product cqrs example
 
 libs
-xUnit, MediatR, FluentValidation, Microsoft.Extensions.DependencyInjection,
-AutoMapper, NetArchTest.Rules, Newtonsoft.Json
+MediatR, FluentValidation, Microsoft.Extensions.DependencyInjection,
+AutoMapper, NetArchTest.Rules, xUnit, Newtonsoft.Json
 
 EntityFrameworkCore, InMemory db
