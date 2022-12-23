@@ -1,4 +1,5 @@
-﻿using Store.Domain.Common.Models;
+﻿using Ordering.API.Entities;
+using Store.Domain.Common.Models;
 using System.Collections.Generic;
 
 namespace Store.Domain.Entities
@@ -7,6 +8,6 @@ namespace Store.Domain.Entities
     {
         public string Name { get; set; }
 
-        public List<int> SalesIds { get; set; }
+        public List<SalesId> SalesIds { get; set; }
     }
 }
