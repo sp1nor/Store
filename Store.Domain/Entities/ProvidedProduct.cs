@@ -1,4 +1,6 @@
-﻿namespace Ordering.API.Entities
+﻿using Store.Domain.Common.Models;
+
+namespace Ordering.API.Entities
 {
     public class ProvidedProduct : Entity
     {

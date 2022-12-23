@@ -21,9 +21,9 @@ namespace Store.Application
             service.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             service.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 
-            //// add cache
-            //service.AddDistributedMemoryCache();
-            //service.AddTransient(typeof(IPipelineBehavior<,>), typeof(CachingBehavior<,>));
+            // add cache
+            service.AddDistributedMemoryCache();
+            service.AddTransient(typeof(IPipelineBehavior<,>), typeof(CachingBehavior<,>));
         }
     }
 }
