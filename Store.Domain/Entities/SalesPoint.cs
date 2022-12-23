@@ -7,6 +7,5 @@ namespace Store.Domain.Entities
     {
         public string Name{ get; set; }
 
-        public List<int> SalesIds { get; set; }
     }
 }
